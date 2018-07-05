@@ -58,7 +58,7 @@ module DynamicSitemaps
     end
 
     def handle_collection
-      sitemap.collection.find_each do |record|
+      sitemap.collection.each do |record|
         if sitemap.block
           instance_exec record, &sitemap.block
         else
